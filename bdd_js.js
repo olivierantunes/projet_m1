@@ -36,8 +36,8 @@ read();
 *@param2 pwd
 * Return: true or false 
 */
-login = function (log, pwd) {
-	db.serialize( function () {
+login = function () {
+	db.serialize( function (log, pwd) {
 		var stmt = db.prepare("SELECT * FROM test WHERE user = '"+log+"' && password = '"+pwd+"'"); //TODO : Update here the name of the table "test" 
 		if(){
 			console.log(true);
